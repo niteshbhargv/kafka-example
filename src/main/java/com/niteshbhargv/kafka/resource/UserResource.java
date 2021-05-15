@@ -26,4 +26,6 @@ public class UserResource {
         kafkaTemplateV1.send(TOPIC, new User(message, "fd",23123L));
         return "published successfully";
     }
+
+
 }

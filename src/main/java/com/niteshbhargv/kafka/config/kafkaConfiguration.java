@@ -16,6 +16,12 @@ import java.util.Map;
 @Configuration
 public class kafkaConfiguration {
 
+    /**
+     * You don't need to redefine the KafkaTemplate, if you define a ProducerFactory it will be used in the autoconfigured
+     * KafkaTemplate (see KafkaAutoConfiguration). In this example the whole ProducerFactory can be removed,
+     * by adding the following property in application.yml
+     * spring.kafka.producer.value-serializer=org.springframework.kafka.support.serializer.JsonSerializer
+     * */
     @Bean
     public ProducerFactory<String, User> producerFactory() {
 
